@@ -1,0 +1,227 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 0;
+}
+
+header{
+    background-color: rgba(255, 255, 231);
+    text-align: center;
+    margin: 0;
+    padding: 12px;
+    color: rgb(255, 136, 0);
+    display: flex;
+    flex-direction: column;   
+    align-items: center;     
+    justify-content: flex-start;
+}
+
+.nome-lbc{   
+    margin: 0;   
+    margin-top: 30px;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgb(153, 82, 0);
+}
+
+.frase{
+    margin: 0;
+    margin-top: px;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgb(153, 82, 0);
+}
+
+.LogoLBC{
+    width: 200px;
+    border-radius: 200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+nav {
+    display: flex;
+    gap: 25px; 
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(255, 136, 0);
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgb(43, 136, 0);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.container-sobre {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("imagens/fundo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px; 
+}
+
+
+.card-sobre{
+    background-color: rgba(236, 236, 236, 0.8);
+    border-radius: 15px;
+    margin: 100px;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.card-cursos {
+    background-color: #ffffff;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px;
+}
+
+.titulo{
+    grid-column: 1 / -1; 
+    text-align: center;
+    width: 100%;              
+    margin-bottom: 20px;
+}
+
+.curso{
+    background-color: rgba(189, 189, 189, 0.8);
+    border-radius: 15px;
+    padding: 25px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.IMG_Cursos{
+    width: 100px;
+}
+
+.titulo-curso{
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.card-galeria{
+    background-color: rgba(189, 189, 189, 0.8);
+    padding: 50px;
+    display: grid;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    gap: 30px;
+}
+
+.slider{
+    position:relative;
+    width:600px;
+    height:350px;
+    margin:auto;
+    overflow:hidden;
+}
+
+.slides{
+    display:flex;
+    height:100%;
+    transition:transform .5s ease;
+}
+
+.slide{
+    min-width:100%;
+    position:relative;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.legenda{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:rgba(0,0,0,.6);
+    color:white;
+    font-size:13px;
+    padding:6px;
+}
+
+.slider input{
+    display:none;
+}
+
+#s1:checked ~ .slides{ transform:translateX(0); }
+#s2:checked ~ .slides{ transform:translateX(-100%); }
+#s3:checked ~ .slides{ transform:translateX(-200%); }
+
+.setas label{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,.5);
+    color:#fff;
+    padding:10px;
+    cursor:pointer;
+    display:none;
+}
+
+.prev{ left:10px }
+.next{ right:10px }
+
+#s1:checked ~ .setas .s1{ display:block; }
+#s2:checked ~ .setas .s2{ display:block; }
+#s3:checked ~ .setas .s3{ display:block; }
+
+.card-processo{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 50px;
+    text-align:center;
+}
+
+.botao-processo{
+    display:block;
+    width:max-content;
+    margin:10px auto;
+    display:inline-block;
+    padding:10px 16px;
+    background:rgb(43, 136, 0);
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:500;
+    transition:.2s;
+    margin: 0 6px;
+}
+
+.botao-processo:hover{
+    background:rgb(33, 105, 0);
+}
+
+footer{
+    background-color: rgba(189, 189, 189, 0.8);
+    text-align: center;
+    margin: 0;
+    padding: 12px;
+}
+.texto-footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
