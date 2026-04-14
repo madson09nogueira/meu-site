@@ -5,7 +5,7 @@ body{
 }
 
 header{
-    background-color: rgba(255, 255, 231);
+    background-color: rgb(255, 255, 255);
     text-align: center;
     margin: 0;
     padding: 12px;
@@ -61,7 +61,7 @@ nav a:hover {
 }
 
 .container-sobre {
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("imagens/fundo.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("imagens/fundo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -89,21 +89,37 @@ nav a:hover {
     gap: 30px;
 }
 
-.titulo{
+.titulo-sobre{
     grid-column: 1 / -1; 
     text-align: center;
     width: 100%;              
     margin-bottom: 20px;
 }
 
+.titulo{
+    grid-column: 1 / -1; 
+    text-align: center;
+    width: 100%;              
+    margin-bottom: 20px;
+    color: rgb(255, 136, 0);
+    text-shadow: 1px 1px 1px rgb(153, 82, 0);
+}
+
 .curso{
-    background-color: rgba(189, 189, 189, 0.8);
+    background-color: rgb(43, 136, 0);
     border-radius: 15px;
     padding: 25px;
     color: rgb(255, 255, 255);
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.curso:hover{
+    background-color: rgb(36, 113, 0);
+    transform: translateY(-7px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .IMG_Cursos{
@@ -115,41 +131,33 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
-.card-galeria{
-    background-color: rgba(189, 189, 189, 0.8);
-    padding: 50px;
-    display: grid;
-    color: rgb(255, 255, 255);
-    text-shadow: 1px 1px 1px rgb(0, 0, 0);
-    gap: 30px;
-}
-
 .slider{
-    position:relative;
-    width:600px;
-    height:350px;
-    margin:auto;
-    overflow:hidden;
+    position: relative;
+    width: 600px;
+    height: 350px;
+    margin: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 3px solid rgb(43, 136, 0);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 .slides{
-    display:flex;
-    height:100%;
-    transition:transform .5s ease;
+    display: flex;
+    height: 100%;
+    transition: transform .5s ease;
 }
 
 .slide{
-    min-width:100%;
-    position:relative;
-    border-radius:12px;
-    overflow:hidden;
+    position: relative;
+    min-width: 100%;
 }
 
 .slide img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .legenda{
@@ -170,6 +178,8 @@ nav a:hover {
 #s1:checked ~ .slides{ transform:translateX(0); }
 #s2:checked ~ .slides{ transform:translateX(-100%); }
 #s3:checked ~ .slides{ transform:translateX(-200%); }
+#s4:checked ~ .slides{ transform:translateX(-300%); }
+#s5:checked ~ .slides{ transform:translateX(-400%); }
 
 .setas label{
     position:absolute;
@@ -188,6 +198,8 @@ nav a:hover {
 #s1:checked ~ .setas .s1{ display:block; }
 #s2:checked ~ .setas .s2{ display:block; }
 #s3:checked ~ .setas .s3{ display:block; }
+#s4:checked ~ .setas .s4{ display:block; }
+#s5:checked ~ .setas .s5{ display:block; }
 
 .card-processo{
     background-color: rgba(255, 255, 255, 0.8);
@@ -211,14 +223,18 @@ nav a:hover {
 }
 
 .botao-processo:hover{
-    background:rgb(33, 105, 0);
+    background: rgb(36, 113, 0);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 footer{
-    background-color: rgba(189, 189, 189, 0.8);
+    background-color: rgb(43, 136, 0);
     text-align: center;
     margin: 0;
     padding: 12px;
+    color: #fff;
+    text-shadow: 1px, 1px, 1px rgb(0, 0, 0);
 }
 .texto-footer{
     display: grid;
